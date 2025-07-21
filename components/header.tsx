@@ -24,7 +24,7 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center">
-            <Image src="/monky-logo.png" alt="" width={120} height={40} className="h-10 w-auto" />
+            <Image src="/logomonky.jpg" alt="" width={120} height={40} className="h-10 w-auto" />
           </Link>
         </div>
 
