@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 48 67% 96%;
+    --foreground: 82 38% 19%;
+    --card: 48 67% 96%;
+    --card-foreground: 82 38% 19%;
+    --popover: 48 67% 96%;
+    --popover-foreground: 82 38% 19%;
+    --primary: 82 38% 19%;
+    --primary-foreground: 48 67% 96%;
+    --secondary: 200 67% 85%;
+    --secondary-foreground: 82 38% 19%;
+    --muted: 48 30% 90%;
+    --muted-foreground: 82 10% 40%;
+    --accent: 25 75% 51%;
+    --accent-foreground: 48 67% 96%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 48 67% 96%;
+    --border: 82 10% 85%;
+    --input: 82 10% 85%;
+    --ring: 25 75% 51%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 82 38% 19%;
+    --foreground: 48 67% 96%;
+    --card: 82 38% 19%;
+    --card-foreground: 48 67% 96%;
+    --popover: 82 38% 19%;
+    --popover-foreground: 48 67% 96%;
+    --primary: 48 67% 96%;
+    --primary-foreground: 82 38% 19%;
+    --secondary: 200 67% 85%;
+    --secondary-foreground: 82 38% 19%;
+    --muted: 82 20% 25%;
+    --muted-foreground: 82 10% 70%;
+    --accent: 25 75% 51%;
+    --accent-foreground: 48 67% 96%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 48 67% 96%;
+    --border: 82 20% 25%;
+    --input: 82 20% 25%;
+    --ring: 25 75% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-cream text-dark-green font-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+/* Custom styles */
+.btn-primary {
+  @apply bg-orange text-cream hover:bg-orange/90 rounded-lg transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-dark-green text-cream hover:bg-dark-green/90 rounded-lg transition-colors;
+}
+
+.btn-outline {
+  @apply border-2 border-orange text-orange hover:bg-orange/10 rounded-lg transition-colors;
+}
