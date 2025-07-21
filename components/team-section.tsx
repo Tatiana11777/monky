@@ -14,37 +14,37 @@ export default function TeamSection() {
     {
       name: "Tatiana",
       role: "Co-fundadora & Owner",
-      image: "/team/tatiana.jpg",
+      image: "tatiana.jpg",
     },
     {
       name: "Leandro",
       role: "Co-fundador & Owner",
-      image: "/team/leandro.jpg",
+      image: "leandro.jpg",
     },
     {
       name: "Jazmín",
       role: "Co-fundadora & Owner",
-      image: "/team/jazmin.jpg",
+      image: "jazmin.jpg",
     },
     {
       name: "Matías",
       role: "Marketer & Publicista Digital",
-      image: "/team/matias.jpg",
+      image: "matias.jpg",
     },
     {
       name: "Jazmín F",
       role: "Marketer & Publicista Digital",
-      image: "/team/jazmin-f.jpg",
+      image: "jazminf.jpg",
     },
     {
       name: "Juan Manuel",
       role: "Marketer & Publicista Digital",
-      image: "/team/juan-manuel.jpg",
+      image: "juanmanuel.jpg",
     },
     {
       name: "Catalina",
       role: "Marketer & Publicista Digital",
-      image: "/team/catalina.jpg",
+      image: "catalina.jpg",
     },
   ]
 
