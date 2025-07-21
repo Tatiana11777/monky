@@ -13,9 +13,7 @@ export default function TestimonialsCarousel() {
   // Testimonial images from public folder
   const testimonials = [
   { id: 1,  image: "/5.webp"  },
-  { id: 2,  image: "/11.webp" },
   { id: 3,  image: "/3.webp"  },
-  { id: 4,  image: "/77.webp" },
   { id: 5,  image: "/6.webp"  },
   { id: 6,  image: "/33.webp" },
   { id: 7,  image: "/1.webp"  },
@@ -23,6 +21,7 @@ export default function TestimonialsCarousel() {
   { id: 9,  image: "/22.webp" },
   { id: 10, image: "/66.webp" },
   { id: 11, image: "/7.webp"  },
+  { id: 2,  image: "/11.webp" },
   { id: 12, image: "/4.webp"  },
   { id: 13, image: "/44.webp" },
   { id: 14, image: "/2.webp"  },
