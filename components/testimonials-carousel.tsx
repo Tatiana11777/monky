@@ -12,19 +12,19 @@ export default function TestimonialsCarousel() {
 
   // Testimonial images from public folder (77.webp removed)
   const testimonials = [
-    { id: 1,  image: "/11.webp" },
-    { id: 2,  image: "/66.webp" },
-    { id: 3,  image: "/55.webp" },
-    { id: 4,  image: "/44.webp" },
-    { id: 5,  image: "/33.webp" },
-    { id: 6,  image: "/22.webp" },
-    { id: 7,  image: "/7.webp"  },
-    { id: 8,  image: "/6.webp"  },
-    { id: 9,  image: "/5.webp"  },
-    { id: 10, image: "/4.webp"  },
-    { id: 11, image: "/3.webp"  },
-    { id: 12, image: "/2.webp"  },
-    { id: 13, image: "/1.webp"  },
+  { id: 1,  image: "/2.webp"  },
+  { id: 2,  image: "/55.webp" },
+  { id: 3,  image: "/7.webp"  },
+  { id: 4,  image: "/33.webp" },
+  { id: 5,  image: "/44.webp" },
+  { id: 6,  image: "/6.webp"  },
+  { id: 7,  image: "/11.webp" },
+  { id: 8,  image: "/22.webp" },
+  { id: 9,  image: "/5.webp"  },
+  { id: 10, image: "/3.webp"  },
+  { id: 11, image: "/66.webp" },
+  { id: 12, image: "/4.webp"  },
+  { id: 13, image: "/1.webp"  },
   ]
 
   // Responsive slidesPerView
