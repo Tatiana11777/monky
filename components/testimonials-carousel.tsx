@@ -10,34 +10,30 @@ export default function TestimonialsCarousel() {
   const [slidesPerView, setSlidesPerView] = useState(1)
   const containerRef = useRef<HTMLDivElement>(null)
 
-  // Testimonial images from public folder
+  // Testimonial images from public folder (77.webp removed)
   const testimonials = [
-  { id: 1,  image: "/5.webp"  },
-  { id: 3,  image: "/3.webp"  },
-  { id: 5,  image: "/6.webp"  },
-  { id: 6,  image: "/33.webp" },
-  { id: 7,  image: "/1.webp"  },
-  { id: 8,  image: "/55.webp" },
-  { id: 9,  image: "/22.webp" },
-  { id: 10, image: "/66.webp" },
-  { id: 11, image: "/7.webp"  },
-  { id: 2,  image: "/11.webp" },
-  { id: 12, image: "/4.webp"  },
-  { id: 13, image: "/44.webp" },
-  { id: 14, image: "/2.webp"  },
-]
+    { id: 1,  image: "/11.webp" },
+    { id: 2,  image: "/66.webp" },
+    { id: 3,  image: "/55.webp" },
+    { id: 4,  image: "/44.webp" },
+    { id: 5,  image: "/33.webp" },
+    { id: 6,  image: "/22.webp" },
+    { id: 7,  image: "/7.webp"  },
+    { id: 8,  image: "/6.webp"  },
+    { id: 9,  image: "/5.webp"  },
+    { id: 10, image: "/4.webp"  },
+    { id: 11, image: "/3.webp"  },
+    { id: 12, image: "/2.webp"  },
+    { id: 13, image: "/1.webp"  },
+  ]
 
+  // Responsive slidesPerView
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setSlidesPerView(3)
-      } else if (window.innerWidth >= 768) {
-        setSlidesPerView(2)
-      } else {
-        setSlidesPerView(1)
-      }
+      if (window.innerWidth >= 1024) setSlidesPerView(3)
+      else if (window.innerWidth >= 768) setSlidesPerView(2)
+      else setSlidesPerView(1)
     }
-
     handleResize()
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
@@ -46,19 +42,18 @@ export default function TestimonialsCarousel() {
   const maxIndex = Math.max(0, testimonials.length - slidesPerView)
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex >= maxIndex ? 0 : prevIndex + 1))
+    setCurrentIndex(prev => (prev >= maxIndex ? 0 : prev + 1))
   }
-
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex <= 0 ? maxIndex : prevIndex - 1))
+    setCurrentIndex(prev => (prev <= 0 ? maxIndex : prev - 1))
   }
 
+  // Sync scroll with index
   useEffect(() => {
     if (containerRef.current) {
       const slideWidth = containerRef.current.scrollWidth / testimonials.length
-      const scrollAmount = currentIndex * slideWidth
       containerRef.current.scrollTo({
-        left: scrollAmount,
+        left: currentIndex * slideWidth,
         behavior: "smooth",
       })
     }
@@ -79,17 +74,21 @@ export default function TestimonialsCarousel() {
             className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide"
             style={{ gap: "24px" }}
           >
-            {testimonials.map((testimonial) => (
+            {testimonials.map(t => (
               <div
-                key={testimonial.id}
+                key={t.id}
                 className={`flex-shrink-0 snap-center ${
-                  slidesPerView === 1 ? "w-full" : slidesPerView === 2 ? "w-[calc(50%-12px)]" : "w-[calc(33.333%-16px)]"
+                  slidesPerView === 1
+                    ? "w-full"
+                    : slidesPerView === 2
+                    ? "w-[calc(50%-12px)]"
+                    : "w-[calc(33.333%-16px)]"
                 }`}
               >
                 <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
                   <Image
-                    src={testimonial.image || "/placeholder.svg"}
-                    alt={`Testimonio ${testimonial.id}`}
+                    src={t.image}
+                    alt={`Testimonio ${t.id}`}
                     fill
                     unoptimized
                     className="object-cover"
