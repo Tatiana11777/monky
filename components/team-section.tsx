@@ -11,41 +11,41 @@ export default function TeamSection() {
   const containerRef = useRef<HTMLDivElement>(null)
 
   const teamMembers = [
-    {
-      name: "Tatiana",
-      role: "Co-fundadora & Owner",
-      image: "tatiana.jpg",
-    },
-    {
-      name: "Leandro",
-      role: "Co-fundador & Owner",
-      image: "leandro.jpg",
-    },
-    {
-      name: "Jazmín",
-      role: "Co-fundadora & Owner",
-      image: "jazmin.jpg",
-    },
-    {
-      name: "Matías",
-      role: "Marketer & Publicista Digital",
-      image: "matias.jpg",
-    },
-    {
-      name: "Jazmín F",
-      role: "Marketer & Publicista Digital",
-      image: "jazminf.jpg",
-    },
-    {
-      name: "Juan Manuel",
-      role: "Marketer & Publicista Digital",
-      image: "juanmanuel.jpg",
-    },
-    {
-      name: "Catalina",
-      role: "Marketer & Publicista Digital",
-      image: "catalina.jpg",
-    },
+     {
+    name: "Jazmín",
+    role: "Co-fundadora & Owner",
+    image: "jazmin.jpg",
+  },
+  {
+    name: "Tatiana",
+    role: "Co-fundadora & Owner",
+    image: "tatiana.jpg",
+  },
+  {
+    name: "Leandro",
+    role: "Co-fundador & Owner",
+    image: "leandro.jpg",
+  },
+  {
+    name: "Jazmín F",
+    role: "Marketer & Publicista Digital",
+    image: "jazminf.jpg",
+  },
+  {
+    name: "Matías",
+    role: "Marketer & Publicista Digital",
+    image: "matias.jpg",
+  },
+  {
+    name: "Catalina",
+    role: "Marketer & Publicista Digital",
+    image: "catalina.jpg",
+  },
+  {
+    name: "Juan Manuel",
+    role: "Marketer & Publicista Digital",
+    image: "juanmanuel.jpg",
+  },
   ]
 
   useEffect(() => {
